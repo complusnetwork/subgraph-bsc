@@ -17,12 +17,12 @@ export function getEthPriceInUSD(): BigDecimal {
     let totalLiquidityETH = daiPair.reserve1.plus(usdtPair.reserve1)
     let daiWeight = daiPair.reserve1.div(totalLiquidityETH)
     let usdtWeight = usdtPair.reserve1.div(totalLiquidityETH)
-    return daiPair.token1Price
+    return daiPair.token0Price
       .times(daiWeight)
-      .plus(usdtPair.token1Price.times(usdtWeight))
+      .plus(usdtPair.token0Price.times(usdtWeight))
     // DAI is the only pair so far
   } else if (daiPair !== null) {
-    return daiPair.token1Price
+    return daiPair.token0Price
   } else {
     //return ONE_BD.times(BigDecimal.fromString("4")) // hack, REMOVE!
     let ret = ONE_BD.times(BigDecimal.fromString("2")).div(BigDecimal.fromString("2"))
