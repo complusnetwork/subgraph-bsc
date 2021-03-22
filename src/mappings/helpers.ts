@@ -7,8 +7,8 @@ import { User, Bundle, Token, LiquidityPosition, LiquidityPositionSnapshot, Pair
 import { Factory as FactoryContract } from '../types/templates/Pair/Factory'
 
 export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000'
-export const FACTORY_ADDRESS = '0xDf97982Bf70be91df4ACD3d511c551F06a0D19eC'
-export const ROUTER_ADDRESS = '0x07DC75E8bc57A21A183129Ec29bbCC232d79eE56'
+export const FACTORY_ADDRESS = '0xdf97982bf70be91df4acd3d511c551f06a0d19ec'
+export const ROUTER_ADDRESS = '0x07dc75e8bc57a21a183129ec29bbcc232d79ee56'
 
 export let ZERO_BI = BigInt.fromI32(0)
 export let ONE_BI = BigInt.fromI32(1)
@@ -56,10 +56,10 @@ export function isNullEthValue(value: string): boolean {
 
 export function fetchTokenSymbol(tokenAddress: Address): string {
   // hard coded overrides
-  if (tokenAddress.toHexString() == '0x7fa892544D49598460B821De4D99E8c28b1Decaa') {
+  if (tokenAddress.toHexString() == '0x7fa892544d49598460b821de4d99e8c28b1decaa') {
     return 'COM'
   }
-  if (tokenAddress.toHexString() == '0x0cC7CBC1609D2B6fD6D33048b9B4aDe8CF9dDe47') {
+  if (tokenAddress.toHexString() == '0x0cc7cbc1609d2b6fd6d33048b9b4ade8cf9dde47') {
     return 'XAG'
   }
 
@@ -86,10 +86,10 @@ export function fetchTokenSymbol(tokenAddress: Address): string {
 
 export function fetchTokenName(tokenAddress: Address): string {
   // hard coded overrides
-  if (tokenAddress.toHexString() == '0x7fa892544D49598460B821De4D99E8c28b1Decaa') {
+  if (tokenAddress.toHexString() == '0x7fa892544d49598460b821de4d99e8c28b1decaa') {
     return 'COMPLUS'
   }
-  if (tokenAddress.toHexString() == '0x0cC7CBC1609D2B6fD6D33048b9B4aDe8CF9dDe47') {
+  if (tokenAddress.toHexString() == '0x0cc7cbc1609d2b6fd6d33048b9b4ade8cf9dde47') {
     return 'ARGENT'
   }
 
@@ -126,7 +126,7 @@ export function fetchTokenTotalSupply(tokenAddress: Address): BigInt {
 
 export function fetchTokenDecimals(tokenAddress: Address): BigInt {
   // hardcode overrides
-  if (tokenAddress.toHexString() == '0x0cC7CBC1609D2B6fD6D33048b9B4aDe8CF9dDe47') {
+  if (tokenAddress.toHexString() == '0x0cc7cbc1609d2b6fd6d33048b9b4ade8cf9dde47') {
     return BigInt.fromI32(18)
   }
 
